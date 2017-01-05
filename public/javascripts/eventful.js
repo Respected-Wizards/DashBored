@@ -13,7 +13,7 @@ console.log("working!");
       $("#map-info").html(mapInfos)
     })
 
-
+    
 
 
 
