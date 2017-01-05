@@ -1,5 +1,5 @@
 $(document).ready(function()    {
-console.log("working!");
+  console.log("working!");
     $.get("/templates/events").then((eventInfo) => {
 
       $("#event-info").html(eventInfo)
@@ -12,9 +12,4 @@ console.log("working!");
     $.get("/templates/maps").then((mapInfos) => {
       $("#map-info").html(mapInfos)
     })
-
-
-
-
-
 })

@@ -27,13 +27,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="/javascripts/googlemaps.js"></script>
     <script src="/javascripts/eventful.js"></script>
-    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/swiper.jquery.js"></script>
     <script src="/javascripts/swiper.min.js"></script>
-    <script>        
-        var mySwiper = new Swiper ('.swiper-container', {
-            direction: 'horizontal',
-            loop: true,
-        })       
+    <script> 
+        (function()  {
+            if(window.screen.width < 600)   {
+               var mySwiper = new Swiper ('.swiper-container', {
+               direction: 'horizontal',
+               loop: true,
+               }) 
+            }
+        }())           
     </script>
   </body>
 </html>
