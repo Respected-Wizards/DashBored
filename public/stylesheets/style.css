@@ -71,9 +71,11 @@ h2 {
     justify-content: space-between;
 }
 
-.swiper-container {
+@media (max-width: 600px)   {
+    .swiper-container {
     width: 100vw;
     height: 300px;
     background-color: white;
     overflow: scroll;
-}    
+    }    
+}
