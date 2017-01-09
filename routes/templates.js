@@ -34,10 +34,14 @@ router.get('/events', function(req, res, next) {
 });
 
 router.get('/maps', function(req, res, next) {
+  let coords = {
+    x: req.query.xCoord,
+    y: req.query.yCoord
+  }
     maps.findPlace({
-            location: '39.742043,-104.991531',
+            location: `${coords.x},${coords.y}`,
             radius: '500',
-            type: 'restaurant'
+            type: 'restaurant',
         })
         .then(body => res.render("maps", {
             mapInfo: body,
