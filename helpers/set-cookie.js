@@ -1,4 +1,5 @@
 const userModel = require('../model/user');
+const R = require('ramda');
 
 module.exports = function setCookie(res, userObj) {
   return new Promise(function(resolve, reject) {
@@ -12,6 +13,7 @@ module.exports = function setCookie(res, userObj) {
       if (!userObj.dashId) {
         userModel.getUserByUsername(userObj.dashUsername).then(function(user) {
           res.cookie('dashId', user.id);
+          let cookie =
           resolve(true);
         })
       } else {
